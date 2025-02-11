@@ -1,5 +1,6 @@
 <template>
     <button
+    ref="_ref"
     class="vk-button"
     :class="{
         [`vk-button--${type}`]: type,
@@ -10,6 +11,8 @@
         'is-disabled': disabled,
     }"
     :disabled="disabled"
+    :autofocus="autofocus"
+    :type="nativeType"
     >
         <span>
             <slot />
@@ -27,14 +30,25 @@ export default defineComponent({
 </script> -->
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import type { ButtonProps } from './types';
+// import  { buttonProps } from './types';
 
 // 引入插件vuemarcos之后就可以直接在defineOptions中定义组件的属性，而不用重新写一个script
 defineOptions({
     name: "cjlButton"
 })
 
-defineProps<ButtonProps>()
+withDefaults(defineProps<ButtonProps>(), {
+    nativeType: 'button'
+})
+
+const _ref = ref<HTMLButtonElement>()
+
+defineExpose({
+    ref: _ref
+})
+
 </script>
 
 <style scoped>
