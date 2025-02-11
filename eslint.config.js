@@ -13,8 +13,10 @@ export default [
   {
     // 添加自定义规则
     rules: {
-      // 示例规则：使用分号结尾
-      'semi': 0
+      // 规则：使用分号结尾
+      'semi': 0,
+      // 规则： 可以让组件文件设置为单个单词
+      'vue/multi-word-component-names': 0
     },
   }
 ];

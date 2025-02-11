@@ -14,7 +14,7 @@ export interface ButtonProps {
     disabled?: boolean;
 }
 
-// 和上面表示方法一样，按照自己喜欢的方式定义类型约束
+// 和上面表示方法一样，按照自己喜欢的方式定义类型约束 element-plus用的就是这种方法
 // export const buttonProps = {
 //     type: {
 //         type: String as PropType<ButtonType>
