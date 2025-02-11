@@ -17,17 +17,22 @@
     </button>
 </template>
 
-<script lang="ts">
+<!-- <script lang="ts">
 // 设置个人组件的个性化名称 需要单独写一个script来设置组件的属性
 import { defineComponent} from 'vue';
 
 export default defineComponent({
     name: 'cjlButton'
 })
-</script>
+</script> -->
 
 <script setup lang="ts">
 import type { ButtonProps } from './types';
+
+// 引入插件vuemarcos之后就可以直接在defineOptions中定义组件的属性，而不用重新写一个script
+defineOptions({
+    name: "cjlButton"
+})
 
 defineProps<ButtonProps>()
 </script>

@@ -6,7 +6,7 @@ import { vueTsConfigs, defineConfigWithVueTs } from '@vue/eslint-config-typescri
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,vue}"] },
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: { ...globals.browser, "defineOptions": "readonly" } } },
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/essential'],
   ...defineConfigWithVueTs(vueTsConfigs.recommended),
@@ -17,6 +17,6 @@ export default [
       'semi': 0,
       // 规则： 可以让组件文件设置为单个单词
       'vue/multi-word-component-names': 0
-    },
+    }
   }
 ];
