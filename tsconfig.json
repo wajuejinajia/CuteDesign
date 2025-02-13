@@ -1,0 +1,32 @@
+{
+  "files": [],
+  // "extends": [
+  //   "env.d.s",
+  //   "src/**/*",
+  //   "src/**/*.vue"
+  // ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "unplugin-vue-macros/macros-global" /* ... */
+    ]
+  },
+  "vueCompilerOptions": {
+    "plugins": [
+      "unplugin-vue-macros/volar"
+    ],
+  },
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+  ]
+}
