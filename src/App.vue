@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-
+// 引入button组件
 import Button from './components/Button/Button.vue'
-
 import type { ButtonInstance } from './components/Button/types'
-
+// 引入collapse组件
+import Collapse from './components/Collapse/Collapse.vue'
+import Item from './components/Collapse/CollapseItem.vue'
 const buttonRef = ref<ButtonInstance | null>(null)
 
-
 onMounted(() => {
-
   if (buttonRef.value) {
     console.log('buttonRef', buttonRef.value.ref)
   }
@@ -32,6 +31,22 @@ onMounted(() => {
     <Button size="small">Small</Button><br/><br/>
     <Button size="large" loading>Loading</Button>
     <Button size="large" icon="arrow-up">Icon</Button><br/><br/>    
+
+    <Collapse>
+      <Item name="a">
+        <template #title>
+          <h1>nice title</h1>
+        </template>
+        <h1>headline title</h1>
+        <div>this is content a aaa</div>
+      </Item>
+      <Item name="b" title="nice title b item b">
+        <div>this is bbbbb test</div>
+      </Item>
+      <Item name="c" title="nice cccc" disabled>
+        <div>this is cccc test</div>
+      </Item>
+    </Collapse>
   </main>
 </template>
 
