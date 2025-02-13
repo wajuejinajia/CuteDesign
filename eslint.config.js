@@ -16,7 +16,10 @@ export default [
       // 规则：使用分号结尾
       'semi': 0,
       // 规则： 可以让组件文件设置为单个单词
-      'vue/multi-word-component-names': 0
+      'vue/multi-word-component-names': 0,
+      // 禁用禁止使用 require() 的规则
+      'no-undef': 'off',
+      'import/no-commonjs': 'off'
     }
   }
 ];
