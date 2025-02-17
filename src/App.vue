@@ -8,6 +8,7 @@ import Collapse from '././components/Collapse/Collapse.vue'
 import Item from '././components/Collapse/CollapseItem.vue'
 const buttonRef = ref<ButtonInstance | null>(null)
 
+const openedValue = ref(['a'])
 onMounted(() => {
   if (buttonRef.value) {
     console.log('buttonRef', buttonRef.value.ref)
@@ -32,7 +33,7 @@ onMounted(() => {
     <Button size="large" loading>Loading</Button>
     <Button size="large" icon="arrow-up">Icon</Button><br/><br/>    
 
-    <Collapse>
+    <Collapse v-model="openedValue" according>
       <Item name="a">
         <template #title>
           <h1>nice title</h1>
@@ -47,6 +48,7 @@ onMounted(() => {
         <div>this is cccc test</div>
       </Item>
     </Collapse>
+    {{ openedValue }}
   </main>
 </template>
 
