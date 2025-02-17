@@ -4,8 +4,8 @@ import { ref, onMounted } from 'vue'
 import Button from './components/Button/Button.vue'
 import type { ButtonInstance } from './components/Button/types'
 // 引入collapse组件
-import Collapse from './components/Collapse/Collapse.vue'
-import Item from './components/Collapse/CollapseItem.vue'
+import Collapse from '././components/Collapse/Collapse.vue'
+import Item from '././components/Collapse/CollapseItem.vue'
 const buttonRef = ref<ButtonInstance | null>(null)
 
 onMounted(() => {
@@ -51,30 +51,6 @@ onMounted(() => {
 </template>
 
 <style>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  border: 1px solid green;
-}
-.vk-tooltip__popper {
-  border: 1px solid red;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
 
