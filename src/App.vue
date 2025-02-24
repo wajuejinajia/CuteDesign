@@ -17,6 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <font-awesome-icon icon="fa-solid fa-user-secret" />
   <main>
     <Button type="primary">Primary</Button>
     <Button type="success">Success</Button>
