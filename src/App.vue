@@ -6,6 +6,8 @@ import type { ButtonInstance } from './components/Button/types'
 // 引入collapse组件
 import Collapse from '././components/Collapse/Collapse.vue'
 import Item from '././components/Collapse/CollapseItem.vue'
+// 引入Icon组件
+import Icon from './components/Icon/Icon.vue'
 const buttonRef = ref<ButtonInstance | null>(null)
 
 const openedValue = ref(['a'])
@@ -17,7 +19,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <font-awesome-icon icon="fa-solid fa-user-secret" />
+  <Icon icon="user-secret" type="danger" color="pink"/>
+  <Icon icon="truck" />
   <main>
     <Button type="primary">Primary</Button>
     <Button type="success">Success</Button>
