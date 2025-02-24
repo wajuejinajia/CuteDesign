@@ -53,6 +53,6 @@
 }
 .slide-enter-active,
 .slide-leave-active {
-  /* transition: height var(--vk-transition-duration); */
-  transition: height 1s ease-in-out;
+  transition: height var(--vk-transition-duration);
+  /* transition: height 1s ease-in-out; */
 }

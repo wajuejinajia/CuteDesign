@@ -9,11 +9,14 @@
         'is-round': round,
         'is-circle': circle,
         'is-disabled': disabled,
+        'is-loading': loading
     }"
-    :disabled="disabled"
+    :disabled="disabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
     >
+    <Icon icon="spinner" spin v-if="loading"/>
+    <Icon :icon="icon" v-if="icon"/>
         <span>
             <slot />
         </span>
@@ -33,6 +36,7 @@ export default defineComponent({
 import { ref } from 'vue';
 import type { ButtonProps } from './types';
 // import  { buttonProps } from './types';
+import Icon from '../Icon/Icon.vue';
 
 // 引入插件vuemarcos之后就可以直接在defineOptions中定义组件的属性，而不用重新写一个script
 defineOptions({
