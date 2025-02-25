@@ -8,7 +8,7 @@
         <div 
             class="vk-collapse-item__header" 
             :class="{
-                'is-disable': disabled,
+                'is-disabled': disabled,
                 'is-active': isActive
             }"
             :id="`item-header-${name}`" 
