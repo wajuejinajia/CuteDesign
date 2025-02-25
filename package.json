@@ -9,17 +9,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@vitejs/plugin-vue-jsx": "^4.1.1",
     "axios": "^1.7.9",
+    "lodash-es": "^4.17.21",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-typescript": "^14.4.0",
+    "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.20.0",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
+    "jsdom": "^26.0.0",
     "postcss": "^8.5.2",
     "postcss-color-mix": "^1.1.0",
     "postcss-comment": "^2.0.0",
@@ -32,6 +39,7 @@
     "unplugin-vue-macros": "^2.14.2",
     "vite": "^6.1.0",
     "vite-plugin-eslint2": "^5.0.3",
+    "vitest": "^3.0.6",
     "vue-tsc": "^2.2.0"
   }
 }
